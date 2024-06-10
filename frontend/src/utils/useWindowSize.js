@@ -18,4 +18,3 @@ export const useWindowSize = () =>{
         height: size[1]
     }
 }
-
