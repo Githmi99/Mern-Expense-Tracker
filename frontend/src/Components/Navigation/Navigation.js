@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import avatar from '../../img/avatar.png'
+import avatar from '../../img/avatar.jpg'
 import { signout } from '../../utils/Icons'
 import { menuItems } from '../../utils/menuItems'
 import { useNavigate } from 'react-router-dom'

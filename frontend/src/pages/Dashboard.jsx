@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useGlobalContext } from "../context/globalContext";
 import Dashboard from "../Components/Dashboard/Dashboard";
-import Transaction from "../Components/Transaction/Transaction";
+import Transactions from "../Components/Transactions/Transactions";
 import IncomeItem from "../Components/IncomeItem/IncomeItem";
 import Expenses from "../Components/Expenses/Expenses";
 import Orb from "../Components/Orb/Orb";
@@ -9,6 +9,7 @@ import { MainLayout } from "../styles/Layout";
 import Navigation from "../Components/Navigation/Navigation";
 import bg from '../img/bg.png'
 import styled from "styled-components";
+
 
 function DashboardPage() {
   const [active, setActive] = useState(1)
@@ -21,7 +22,7 @@ function DashboardPage() {
       case 1:
         return <Dashboard />
       case 2:
-        return <Transaction />
+        return <Transactions />
       case 3:
         return <IncomeItem />
       case 4: 

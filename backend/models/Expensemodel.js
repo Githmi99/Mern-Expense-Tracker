@@ -1,39 +1,14 @@
+// backend/models/expensemodel.js
 const mongoose = require('mongoose');
 
-const ExpenseSchema = new mongoose.Schema({
-    title:{
-        type: String,
-        required: true,
-        trim: true,
-        maxLength: 50
-    },
-    amount:{
-        type: Number,
-        required: true,
-        maxLength: 20,
-        trim: true
-    },
-    type:{
-        type: String,
-        default: "income"
-    },
-    date:{
-        type: Date,
-        required:true,
-        trim: true,
-    },
-    category:{
-        type: String,
-        required: true,
-        trim: true,
-        maxLength: 30,
-    },
-    description:{
-        type: String,
-        required: true,
-        trim: true,
-        maxLength: 20
-    },
-},{timestamps: true});
+const expenseSchema = new mongoose.Schema({
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    title: { type: String, required: true },
+    amount: { type: Number, required: true },
+    category: { type: String, required: true },
+    description: { type: String, required: true },
+    date: { type: Date, required: true },
+}, { timestamps: true });
 
-module.exports = mongoose.model('Expense', ExpenseSchema);
+const Expense = mongoose.model('Expense', expenseSchema);
+module.exports = Expense;
