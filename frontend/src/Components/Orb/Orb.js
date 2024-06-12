@@ -37,4 +37,4 @@ function Orb() {
     )
 }
 
-export default Orb
+export default Orb;
